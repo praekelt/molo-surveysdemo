@@ -3,6 +3,7 @@
 
 {% load static core_tags %}
 {% load wagtailcore_tags wagtailimages_tags %}
+{% load molo_survey_tags %}
 
 {% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
 
@@ -37,6 +38,9 @@
       {% endif %}
   {% endfor %}
 </article>
+
+{% surveys_list page=self %}
+
 </div>
 {% endblock %}
 
