@@ -42,3 +42,9 @@ local.py
 db.sqlite3
 docs/_build
 .DS_Store
+
+# PyCharm / IntelliJ
+.idea/
+
+# Media
+media/
