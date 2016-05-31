@@ -79,6 +79,9 @@ INSTALLED_APPS = [
     'raven.contrib.django.raven_compat',
     'django_cas_ng',
     'compressor',
+
+    'wagtailsurveys',
+    'molo.surveys'
 ]
 
 SITE_ID = 1
