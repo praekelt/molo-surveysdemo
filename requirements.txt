@@ -3,7 +3,7 @@ gunicorn
 psycopg2
 celery
 django-celery
-
+redis
 django-extensions
 
 molo.surveys
