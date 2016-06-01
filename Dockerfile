@@ -11,6 +11,7 @@ ENV DJANGO_SETTINGS_MODULE demoapp.settings.docker
 WORKDIR /deploy/
 
 COPY demoapp /deploy/demoapp
+COPY locale /deploy/locale
 ADD manage.py /deploy/
 ADD requirements.txt /deploy/
 ADD setup.py /deploy/
