@@ -27,7 +27,9 @@ setup(name='demoapp',
       license='BSD',
       packages=find_packages(),
       include_package_data=True,
-      dependency_links=['https://github.com/praekelt/molo.surveys/tarball/TUNE-89-integrate-wagtailsurveys#egg=molo.surveys-0.1.0'],
+      dependency_links=['https://github.com/praekelt/molo.surveys/tarball/'
+                        'TUNE-89-integrate-wagtailsurveys'
+                        '#egg=molo.surveys-0.1.0'],
       zip_safe=False,
       install_requires=requires,
       tests_require=requires,
