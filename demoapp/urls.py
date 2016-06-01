@@ -30,7 +30,6 @@ urlpatterns += patterns(
     url(r'search/$', search, name='search'),
 
     url(r'', include('molo.core.urls')),
-    url('^', include('django.contrib.auth.urls')),
     url(r'', include(wagtail_urls)),
 )
 

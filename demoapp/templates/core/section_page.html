@@ -14,8 +14,7 @@
         {% endif %}
         {{self.title}}
       </h2>
-      {% load_child_sections_for_section self as sections %}
-      {% for section in sections %}
+      {% for section in self.sections %}
         <h2 class="list-header">
           {% if section.image %}
             <a href="{% pageurl section %}">{% image section.image width-60 %}</a>
@@ -24,9 +23,8 @@
           <ul class="list-block">
             <li>
               {% if section.description %}<p>{{section.description}}</p>{% endif %}
-              {% load_descendant_articles_for_section section featured_in_section=True as featured_articles %}
-              {% if featured_articles %}
-              {% for article in featured_articles %}
+              {% if section.featured_articles %}
+              {% for article in section.featured_articles %}
                 <h3><a href="{% pageurl article %}">{{article.title}}</a></h3>
                 <p>{{article.subtitle}}</p>
               {% endfor %}
@@ -36,8 +34,7 @@
         </h2>
       {% endfor %}
 
-      {% load_child_articles_for_section self as articles %}
-      {% for article in articles %}
+      {% for article in self.articles %}
       <ul class="list-block">
         <li>
           {% if article.image %}
@@ -48,21 +45,6 @@
         </li>
       </ul>
       {% endfor %}
-
-      {% if articles %}
-      <div class="step-links l-indent l-indent--tall">
-        {% if articles_paginated.has_previous %}
-            <a href="?p={{ articles_paginated.previous_page_number }}">&larr;</a>
-        {% endif %}
-        <span class="current">
-            Page {{ articles_paginated.number }} of {{ articles_paginated.paginator.num_pages }}
-        </span>
-        {% if articles_paginated.has_next %}
-            <a href="?p={{ articles_paginated.next_page_number }}">&rarr;</a>
-        {% endif %}
-      </div>
-      {% endif %}
-      
     </div>
 {% endblock %}
 
