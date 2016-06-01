@@ -1,4 +1,6 @@
 molo.core==2.6.17
+gunicorn
+psycopg2
 celery
 django-celery
 
