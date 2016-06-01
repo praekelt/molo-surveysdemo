@@ -2,4 +2,4 @@ molo.core==3.1.6
 
 django-modelcluster>=2.0,<3.0
 
--e git+https://github.com/praekelt/molo.surveys@TUNE-89-integrate-wagtailsurveys#egg=molo.surveys
+molo.surveys
