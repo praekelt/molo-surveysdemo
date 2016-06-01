@@ -17,7 +17,7 @@ ADD setup.py /deploy/
 ADD README.rst /deploy/
 ADD VERSION /deploy/
 
-RUN pip install -e .
+RUN pip install -e . --process-dependency-links
 
 RUN mkdir -p /etc/supervisor/conf.d/
 RUN mkdir -p /var/log/supervisor
